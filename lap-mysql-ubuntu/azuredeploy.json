@@ -29,7 +29,7 @@
     },
     "lapVmSize": {
       "type": "string",
-      "defaultValue": "Standard_D3",
+      "defaultValue": "Standard_A3",
       "allowedValues": [
 	    "Standard_A1",
 		"Standard_A2",
@@ -51,7 +51,7 @@
     },
     "mysqlVmSize": {
       "type": "string",
-      "defaultValue": "Standard_D3",
+      "defaultValue": "Standard_A3",
       "allowedValues": [
 	    "Standard_A1",
 		"Standard_A2",
@@ -66,7 +66,7 @@
     }
   },
   "variables": {
-    "templateBaseUrl": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/lap-mysql-ubuntu/",
+    "templateBaseUrl": "https://raw.githubusercontent.com/kappa011/azure-quickstart-templates/master/lap-mysql-ubuntu/",
     "sharedTemplateUrl": "[concat(variables('templateBaseUrl'), 'shared-resources.json')]",
     "lampLapTemplateUrl": "[concat(variables('templateBaseUrl'), 'lamplap-resources.json')]",
     "lampMysqlTemplateUrl": "[concat(variables('templateBaseUrl'), 'lampmysql-resources.json')]",
@@ -95,22 +95,22 @@
       "imageReference": {
         "publisher": "Canonical",
         "offer": "UbuntuServer",
-        "sku": "14.04.2-LTS",
+        "sku": "16.04.0-LTS",
         "version": "latest"
       },
       "scripts": [
-        "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/lap-mysql-ubuntu/install-lap.sh"
+        "https://raw.githubusercontent.com/kappa011/azure-quickstart-templates/master/lap-mysql-ubuntu/install-lap.sh"
       ]
     },
     "mysqlOsSettings": {
       "imageReference": {
         "publisher": "Canonical",
         "offer": "UbuntuServer",
-        "sku": "14.04.2-LTS",
+        "sku": "16.04.0-LTS",
         "version": "latest"
       },
       "scripts": [
-        "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/lap-mysql-ubuntu/install-mysql.sh"
+        "https://raw.githubusercontent.com/kappa011/azure-quickstart-templates/master/lap-mysql-ubuntu/install-mysql.sh"
       ]
     }
   },
